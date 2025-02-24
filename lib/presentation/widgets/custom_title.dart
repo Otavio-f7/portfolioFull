@@ -21,7 +21,7 @@ class _CustomTitleState extends State<CustomTitle> {
         TextButton(
           onPressed: ()=> widget.action(1), 
           child: const Text(
-            'Sobre', 
+            'Projetos', 
             style: TextStyle(
               fontSize: 25,
               color: Colors.white
@@ -31,7 +31,7 @@ class _CustomTitleState extends State<CustomTitle> {
         TextButton(
           onPressed: ()=> widget.action(2), 
           child: const Text(
-            'Projetos', 
+            'Sobre', 
             style: TextStyle(
               fontSize: 25,
               color: Colors.white
@@ -61,41 +61,20 @@ class _CustomTitleState extends State<CustomTitle> {
               icon: const Icon(Icons.menu_outlined),
               itemBuilder: (context) => [
                 const PopupMenuItem(
-                  value: 0,
-                  child: CustomRow(icon: Icons.home, text: 'Inicio')
-                ),
-                const PopupMenuItem(
                   value: 1,
-                  child: CustomRow(icon: Icons.construction, text: 'Skills'),
+                  child: Text('Projetos'),
                 ),
                 const PopupMenuItem(
                   value: 2,
-                  child: CustomRow(icon: Icons.now_widgets, text: 'Projetos'),
+                  child: Text('Sobre'),
                 ),
                 const PopupMenuItem(
                   value: 3,
-                  child: CustomRow(icon: Icons.contact_emergency, text: 'Contato'),
+                  child: Text('Contato'),
                 ),
               ],
             )
           ],
-    );
-  }
-}
-
-class CustomRow extends StatelessWidget {
-  final IconData icon;
-  final String text;
-  const CustomRow({super.key, required this.icon, required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-          Icon(icon),
-          const SizedBox(width: 20),
-          Text(text, style: const TextStyle(fontSize: 25)),
-      ],
     );
   }
 }

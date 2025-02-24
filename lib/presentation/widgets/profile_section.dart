@@ -19,11 +19,11 @@ class _ProfileSectionState extends State<ProfileSection> {
       children: [
         SizedBox(
           width: widget.screenSize.width >= 1200 ? 1200 : double.infinity,
-          height: widget.screenSize.width >= 1200 ? 500 : 1500,
+          height: widget.screenSize.width >= 1200 ? 500 : 1105,
           key: widget.sectionKey,
           child: ListView(
             scrollDirection: widget.screenSize.width >= 1200 ? Axis.horizontal : Axis.vertical,
-            // physics: const NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             children: [
               Container(
                 padding: EdgeInsets.only(left: 50),

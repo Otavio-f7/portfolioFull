@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio/presentation/widgets/contact_section.dart';
-import 'package:portifolio/presentation/widgets/home_section.dart';
+import 'package:portifolio/presentation/widgets/about_section.dart';
+import 'package:portifolio/presentation/widgets/conect_section.dart';
 import 'package:portifolio/presentation/widgets/profile_section.dart';
-import 'package:portifolio/presentation/widgets/projects_section.dart';
-import 'package:portifolio/presentation/widgets/skill_section.dart';
+import 'package:portifolio/presentation/widgets/project_section.dart';
 import 'package:portifolio/presentation/widgets/custom_title.dart';
 
 
@@ -37,7 +36,8 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(10),
           child: Image.asset('assets/images/flutter_icon.png', fit: BoxFit.cover,),
         ),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.black,
+        scrolledUnderElevation: 0.0,
         title:  CustomTitle(
           action: scrollToSection, 
           screenSize: screenSize
@@ -51,10 +51,12 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ProfileSection(action: scrollToSection, screenSize: screenSize, sectionKey: sections[0]),
-            // HomeSection(size: screenSize, sectionKey: sections[4]),
-            SkillSection(size: screenSize, sectionKey: sections[1]),
-            ProjectsSection(size: screenSize, sectionKey: sections[2]),
-            ContactSection(size: screenSize, sectionKey: sections[3]),
+            SizedBox(height: 60, child: Divider(color: Colors.white.withOpacity(0.2),),),
+            ProjectSection(screenSize: screenSize, sectionKey: sections[1]),
+            SizedBox(height: 60, child: Divider(color: Colors.white.withOpacity(0.2),),),
+            AboutSection(screenSize: screenSize, sectionKey: sections[2]),
+            SizedBox(height: 60, child: Divider(color: Colors.white.withOpacity(0.2),),),
+            ConectSection(screenSize: screenSize, sectionKey: sections[3])
           ],
         ),
       ),
