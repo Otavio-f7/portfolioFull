@@ -36,9 +36,8 @@ class _ProjectSectionState extends State<ProjectSection> {
               ),
         SizedBox(
           width: widget.screenSize.width >= 1100 ? 1100 : 500,
-          height: widget.screenSize.width >= 1100 ? 500 * 5 : 1000 * 5,
+          height: widget.screenSize.width >= 1100 ? 500 * 9 : 1000 * 9, //qnt de itens
           child: ListView.builder(
-            // shrinkWrap: true,
             itemCount: projectsData.length,
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (ctx, i){
