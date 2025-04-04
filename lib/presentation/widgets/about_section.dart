@@ -20,35 +20,33 @@ class _AboutSectionState extends State<AboutSection> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
-          width: widget.screenSize.width >= 1200 ? 1200 : double.infinity,
-          height: widget.screenSize.width >= 1200 ? 300 : 405,
+          width: widget.screenSize.width >= 1100 ? 1100 : double.infinity,
+          height: widget.screenSize.width >= 1100 ? 300 : 605,
           key: widget.sectionKey,
           child: ListView(
-            scrollDirection: widget.screenSize.width >= 1200 ? Axis.horizontal : Axis.vertical,
+            scrollDirection: widget.screenSize.width >= 1100 ? Axis.horizontal : Axis.vertical,
             physics: const NeverScrollableScrollPhysics(),
             children: [
               Container(
-                padding: const EdgeInsets.only(left: 50),
                 height: 100,
-                width: 500,
+                width: 450,
                 child: const Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Sobre mim', style: TextStyle(fontSize: 50),),
+                    Text('Sobre mim', style: TextStyle(fontSize: 50, height: 0.9),),
                   ],
                 ),
               ),
               SizedBox(
-                height: widget.screenSize.width >= 1200 ? 0 : 5,
-                width: widget.screenSize.width >= 1200 ? 50 : 0,
+                height: widget.screenSize.width >= 1100 ? 0 : 5,
+                width: widget.screenSize.width >= 1100 ? 50 : 0,
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-                height: 300,
+                height: widget.screenSize.width >= 1100 ? 300 : 500,
                 width: 600,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -61,8 +59,8 @@ class _AboutSectionState extends State<AboutSection> {
                       children: [
                         TextButton(
                           onPressed: () async {
-                            if (await canLaunchUrl(Uri.parse('https://drive.google.com/file/d/15cMnnyavD2a9UfCQVGVgqmsUI-5YClmJ/view?usp=drive_link'))) {
-                              await launchUrl(Uri.parse('https://drive.google.com/file/d/15cMnnyavD2a9UfCQVGVgqmsUI-5YClmJ/view?usp=drive_link'));
+                            if (await canLaunchUrl(Uri.parse('https://drive.google.com/file/d/1WmeKxRrB3v_ZFYFJ4_0peg3ubFXETwfL/view?usp=sharing'))) {
+                              await launchUrl(Uri.parse('https://drive.google.com/file/d/1WmeKxRrB3v_ZFYFJ4_0peg3ubFXETwfL/view?usp=sharing'));
                             } else {
                               throw 'Could not launch link';
                             }

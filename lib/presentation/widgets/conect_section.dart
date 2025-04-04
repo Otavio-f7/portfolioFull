@@ -26,25 +26,24 @@ class _ConectSectionState extends State<ConectSection> {
   Widget build(BuildContext context) {
     return Column(
       key: widget.sectionKey,
-      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
-          width: widget.screenSize.width >= 1200 ? 1200 : double.infinity,
-          height: widget.screenSize.width >= 1200 ? 300 : 405,
+          width: widget.screenSize.width >= 1100 ? 1100 : double.infinity,
+          height: widget.screenSize.width >= 1100 ? 300 : 400,
           child: ListView(
-            scrollDirection: widget.screenSize.width >= 1200 ? Axis.horizontal : Axis.vertical,
+            scrollDirection: widget.screenSize.width >= 1100 ? Axis.horizontal : Axis.vertical,
             physics: const NeverScrollableScrollPhysics(),
             children: [
               Container(
-                padding: const EdgeInsets.only(left: 50),
-                height: 100,
+                height: 300,
                 width: 500,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text('VAMOS CONVERSAR?', style: TextStyle(fontSize: 50, height: 0.9),),
-                    const SizedBox(height: 10,),
+                    const SizedBox(height: 30,),
                     const Text('Envie um e-mail para:'),
                     Row(
                       children: [
@@ -89,12 +88,11 @@ class _ConectSectionState extends State<ConectSection> {
                 ),
               ),
               SizedBox(
-                height: widget.screenSize.width >= 1200 ? 0 : 5,
-                width: widget.screenSize.width >= 1200 ? 50 : 0,
+                height: widget.screenSize.width >= 1100 ? 0 : 5,
+                width: widget.screenSize.width >= 1100 ? 50 : 0,
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-                height: 300,
+                height: 100,
                 width: 600,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
